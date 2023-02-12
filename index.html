@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+  <link rel="stylesheet" href="style.css">
+  <title>Budget Calculator</title>
+</head>
+
+<body class="bg-gray-300">
+  <header class="h-16 bg-slate-500">
+    <h1 class="font-bold text-center text-white text-3xl pt-3">
+      Budget Calculator
+    </h1>
+  </header>
+  <main>
+    <div class="container">
+      <h1 class="text-xl text-center p-4">Enter Amount to Manage</h1>
+      <input id="insert_value" type="text" placeholder="Enter Amount" class="p2 text-center block mx-auto"/>
+    </div>
+
+    <div id="splitDiv" class="mt-10 hidden">
+      <p class="font-bold text-xl text-center">
+        How would you like to divide your money?
+      </p>
+      <div class="flex mt-10 justify-between">
+        <div class="flex-grow">
+          <label for="room_rent">Room Rent(%)</label>
+          <input id="roomrent" type="text" placeholder="Enter Room Rent(%)" />
+        </div>
+
+        <div class="flex-grow">
+          <label for="accessories">Accessories(%)</label>
+          <input id="access" type="text" placeholder="Enter Accessories(%)" />
+        </div>
+        <div class="flex-grow">
+          <label for="sideHustle">Food & Entertainment(%)</label>
+          <input id="sidehustle" type="text" placeholder="Enter Side Hustle(%)" />
+        </div>
+        <div class="flex-grow">
+          <label for="savings">Saving(%)</label>
+          <input id="sav" type="text" placeholder="Enter Saving(%)" />
+        </div>
+      </div>
+      <div id="eBtn" class="mt-10 text-center hidden">
+        <button id="evaluateBtn"
+          class="mx-4 px-6 p-3 rounded-full border-black bg-blue-500 hover:bg-blue-300 drop-shadow-xl">
+          Evaluate
+        </button>
+      </div>
+    </div>
+
+    <div id="result_section" class="hidden">
+      <div class="mt-10">
+        <p class="font-bold text-xl text-center">
+          By this Way you can manage your money
+        </p>
+        <div class="flex mt-5">
+          <div class="bg-blue-600 shadow-lg px-6 py-4 rounded flex-grow mx-5">
+            <h1 class="font-bold text-white text-xl">Room Rent</h1>
+            <p id="show_room" class="font-semibold text-white text-2xl"></p>
+          </div>
+          <div class="bg-pink-500 shadow-lg px-6 py-4 rounded flex-grow mx-5">
+            <h1 class="font-bold text-white text-xl">Accessories</h1>
+            <p id="show_access" class="font-semibold text-white text-2xl"></p>
+          </div>
+          <div class="bg-green-600 shadow-lg px-6 py-4 rounded flex-grow mx-5">
+            <h1 class="font-bold text-white text-xl">Food & Entertainment</h1>
+            <p id="show_sh" class="font-semibold text-white text-2xl"></p>
+          </div>
+          <div class="bg-purple-400 shadow-lg px-6 py-4 rounded flex-grow mx-5">
+            <h1 class="font-bold text-white text-xl">Saving</h1>
+            <p id="show_save" class="font-semibold text-white text-2xl"></p>
+          </div>
+        </div>
+      </div>
+      <div class="mt-10 text-center">
+        <button id="reset" class="mx-4 p-3 px-2 bg-orange-300 hover:bg-red-300 text-white font-bold rounded">
+          RESET
+        </button>
+      </div>
+    </div>
+    
+  </main>
+
+  <script type="text/javascript" src="app.js"></script>
+</body>
+
+</html>
